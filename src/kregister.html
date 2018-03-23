@@ -1,0 +1,91 @@
+<html>
+<head>
+	<title>Register</title>
+<head>
+<body>
+<h1 align="center">Register Now</h1>
+<form name="f1" method="post" action="kregsucc.html">
+
+
+
+<fieldset><legend>LOGIN</legend>
+
+Enter Username<br>
+<input type="text" name="uname"><br><br>
+
+Create a password<br>
+<input type="password"name="pass"><br><br>
+
+Name<br>
+<input type="text" name="fname" placeholder="First Name">
+<input type="text" name="lname" placeholder="Last Name"> <br><br>
+
+Age <br>
+<input type="number" name="tag"><br><br>
+
+GENDER : <input type="radio" id="male" name="gen" value="MALE"> MALE
+<input type="radio" id="female" name="gen" value="FEMALE"> FEMALE
+<br><br>
+
+Contact No.<br>
+
+<input type="number" name="cno"><br><br>
+
+<input type="checkbox" name="c1"> I accept all the Terms and Conditions.
+<br><br>
+
+<input type="submit" name="sub" value="REGISTER" onclick="return checkvalid()">
+<input type="reset" name="res" value="CANCEL">
+
+</form>
+<script>
+
+function checkvalid()
+{
+var un=f1.uname.value;
+var pass=f1.pass.value;
+var fname = f1.fname.value;
+var lname=f1.lname.value;
+var age =f1.tag.value;
+var contact =f1.cno.value;
+
+
+if (un != '' && pass != '' && fname!='' && lname!='' && age!='' && contact != '')
+{	if (document.getElementById("male").checked || document.getElementById("female").checked)
+	{	if (contact.length == 10)
+		{	//alert("All type of validation has done on OnSubmit event.");
+			//return true;
+			if(f1.c1.checked)
+			{
+				// window.location.href='1.html';
+				return true;
+			}
+			else
+			{
+				alert("Please agree Terms & Conditions!");
+				return false;
+			}
+		}
+		else
+		{	alert("The Contact No. must be at least 10 digit long!");
+			return false;
+		}
+	}
+	else
+	{	alert("You must select gender.....!");
+		return false;
+	}
+}
+else {
+alert("All fields are required.....!");
+return false;
+}
+
+}
+
+
+</script>
+
+</body>
+
+</html>

@@ -1,10 +1,24 @@
 <html>
-<head>
-	<title>Register</title>
-<head>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<title>Pete's Pet Shop</title>
+	
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+	
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	  </head>
 <body>
 <h1 align="center">Register Now</h1>
-<form name="f1" method="post" action="kregsucc.html">
+<form name="f1" method="post" action="pdetails.html">
 
 
 
@@ -29,13 +43,13 @@ GENDER : <input type="radio" id="male" name="gen" value="MALE"> MALE
 
 Contact No.<br>
 
-<input type="number" name="cno"><br><br>
+<input type="number" name="cno"/><br><br>
 
-<input type="checkbox" name="c1"> I accept all the Terms and Conditions.
+<input type="checkbox" name="c1"/> I accept all the Terms and Conditions.
 <br><br>
 
-<input type="submit" name="sub" value="REGISTER" onclick="return checkvalid()">
-<input type="reset" name="res" value="CANCEL">
+<input type="submit" name="sub" value="REGISTER" onclick="return checkvalid()"/>
+<input type="reset" name="res" value="CANCEL"/>
 
 </form>
 <script>
@@ -85,7 +99,13 @@ return false;
 
 
 </script>
-
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/web3.min.js"></script>
+<script src="js/truffle-contract.js"></script>
+<script src="js/app.js"></script>
 </body>
 
 </html>
